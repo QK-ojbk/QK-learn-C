@@ -1,0 +1,156 @@
+//1、hello word
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    printf("Hello world!\n");
+    return 0;
+}
+//2、hello 草泥马
+#include <stdio.h>
+//包含一个stdio.h的文件，头文件
+//std-标准，i-input，o-output
+#include <stdlib.h>
+
+int main()//main前面的int 便是main函数调用返回一个整型值
+{
+    printf("Hello world!草泥马\n");
+    //此处printf函数是库函数(打印函数)：print+function
+    //"\n"表示换行
+    return 0;
+}
+//格式：
+//#include<stdio.h>(添加各种头文件)
+//int main()
+//{
+//   程序（想实现的内容）
+//   return 0；
+//}
+
+//3、字符A
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char ch='A';//向内存申请了一个空间，空间的名字叫“ch”,用于存放变量字符A
+    printf("%c\n",ch);//%c-打印字符格式的数据，我以字符的形式打印ch
+    return 0;
+}
+//4、整形十进制
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int age=20;
+    printf("%d\n",age);//%d-打印整形十进制数据
+    return 0;
+}
+//5、打印
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float f=5.0;
+    printf("%f\n",f);
+    return 0;
+}
+//%d-打印整形
+//%c-打印字符
+//%f-打印浮点型，即小数
+//%p-以地址的形式打印
+//%x-打印十六进制数字
+//%o…………
+
+//6、打印双精度
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    double d=3.14;
+    printf("%lf\n",d);//%lf-表示打印双精度
+    return 0;
+}
+
+//7、不同类型申请的字节空间
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    printf("%d\n",sizeof(char));
+    //计算char这种类型能像内存申请多大的空间
+    printf("%d\n",sizeof(short ));
+    printf("%d\n",sizeof(int));
+    printf("%d\n",sizeof(long));
+    printf("%d\n",sizeof(long long));
+    printf("%d\n",sizeof(float));
+    printf("%d\n",sizeof(double));
+    return 0;
+}
+//计算机中的单位
+//bit-比特位
+//byte-字节,一个字节等于8个比特位
+//kb，一个Kb是1024byte,下面也是
+//mb
+//gb
+//tb
+//pb
+
+//8、双精度与单精度
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    short int age=20;//向内存申请两个字节，存放“20”
+    float weight=95.6f;
+    //向内存申请4个字节用来存放小数
+    //数字后面加f是为了申明这个是单精度浮点型，计算机均默认含小数的是双精度
+    printf("%d\n",age);
+    printf("%f\n",weight);
+    return 0;
+}
+
+//9、全局变量与局部变量
+#include <stdio.h>
+#include <stdlib.h>
+int num1=20;//此处的定义是全局变量-定义在代码块{}之外的变量
+
+int main()
+{
+    int num2=10;//局部变量-定义在代码块{}内部的变量
+    //局部变量和全局变量名字建议不要相同
+    //若二者相同，则局部变量优先
+    printf("%d\n",num2);//局部变量只能在其所在代码块{}内使用，代码块外无法调用
+    return 0;
+}
+
+//10、求和
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+
+    //计算2个数的和
+    int num1=0;
+    int num2=0;
+    int sum=0;//C语言语法规定，变量要定义在当前代码块的最前面
+    //输入数据-使用输入函数scanf
+    scanf("%d%d",&num1,&num2);//&表示取地址符号
+    sum=num1+num2;
+    printf("sum=%d\n",sum);
+    return 0;
+}
+
+
+
+
+
+
+
