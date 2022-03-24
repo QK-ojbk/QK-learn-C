@@ -1,19 +1,16 @@
 #include <stdio.h>
-//包含一个stdio.h的文件，头文件
-//std-标准，i-input，o-output
 #include <stdlib.h>
 
-int main()//main前面的int 便是main函数调用返回一个整型值
+int main()
 {
-    printf("Hello world!草泥马\n");
-    //此处printf函数是库函数(打印函数)：print+function
-    //"\n"表示换行
+
+    //计算2个数的和
+    int num1=0;
+    int num2=0;
+    int sum=0;//C语言语法规定，变量要定义在当前代码块的最前面
+    //输入数据-使用输入函数scanf
+    scanf("%d%d",&num1,&num2);//&表示取地址符号
+    sum=num1+num2;
+    printf("sum=%d\n",sum);
     return 0;
 }
-//格式：
-//#include<stdio.h>(添加各种头文件)
-//int main()
-//{
-//   程序（想实现的内容）
-//   return 0；
-//}
